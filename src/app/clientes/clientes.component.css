@@ -1,0 +1,59 @@
+/* body */
+body {
+    
+    background: rgb(37, 36, 36);
+    min-height: 100vh;
+    background: rgb(2, 0, 36);
+  
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 19, 121, 1) 20%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+  .navbar {
+     
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 40%,
+      rgba(9, 19, 121, 1) 99%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+  
+  #logoNavbar {
+    height: auto;
+    width: 40px;
+  }
+  
+  .icono {
+    height: 40px;
+    width: 40px;
+    margin-right: 5%;
+    margin-left: 10%;
+  }
+
+  
+ 
+  
+  .footer {
+    padding-top: 10px;
+    color: white;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 19, 121, 1) 20%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+  
+  #textoFooter {
+    margin-bottom: 3%;
+    margin-top: 2%;
+    font-size: 20px;
+  }
+  
