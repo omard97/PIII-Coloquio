@@ -8,6 +8,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
+import { RegistrarseComponent } from './registrarse/registrarse.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
     CatalogoComponent,
     NosotrosComponent,
     CrearClienteComponent,
+    RegistrarseComponent,
     
   ],
   imports: [
