@@ -43,8 +43,14 @@
     </nav><!-- fin de la barra de navegación -->
 
 
-    <div style="color: white;">
-        {{clientes| json}}
+    <div *ngFor = "let item of clientes;" style="color: white;">  
+        <div *ngIf = "(item.id == 1) && (item.nombre == 'juan') ">
+
+            {{item.id}}
+            -
+            {{item.nombre}}
+            
+        </div>
     </div>
     
 
