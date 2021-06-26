@@ -5,7 +5,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
-import { RegistrarseComponent } from './registrarse/registrarse.component';
+
 
 
 const routes: Routes = [
