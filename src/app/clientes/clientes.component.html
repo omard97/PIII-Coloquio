@@ -42,16 +42,53 @@
         </div>
     </nav><!-- fin de la barra de navegación -->
 
+    <h1> Lista de clientes</h1>
+    
 
-    <div *ngFor = "let item of clientes;" style="color: white;">  
-        <div *ngIf = "(item.id == 1) && (item.nombre == 'juan') ">
+    <div class="container" id="contenedorTabla">
+        <table  class="table table-dark table-striped table-hover" style="color: white;">
+            <thead>
+              <tr>
+                <th scope="col">Numero Cliente</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                <th scope="col"> </th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor = "let item of clientes;">
+                <th>{{item.idCliente}}</th>
+                <td> {{item.nombre}}</td>
+                <td> {{item.apellido}}</td>
+                <td>{{item.correo}}</td>
+                <td> <button id="btn1"class="btn"> Modificar</button>
+                    <button  id="btn2" class="btn"> Eliminar</button></td>
+              </tr>
+             
+            </tbody>
+          </table>
+
+    </div>
+    
+   
+
+
+    <!-- <div *ngFor = "let item of clientes;" style="color: white;">  
+        {{item.idCliente}}
+            -
+            {{item.nombre}}
+            -
+            {{item.apellido}}
+            {{item.correo}} -->
+        <!-- <div *ngIf = "(item.id == 1) && (item.nombre == 'juan') ">
 
             {{item.id}}
             -
             {{item.nombre}}
             
-        </div>
-    </div>
+        </div> -->
+    <!-- </div> -->
     
 
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { producto } from '../model/producto';
+import { BackenApiService } from '../services/backen-api.service';
 
 @Component({
   selector: 'app-catalogo',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogoComponent implements OnInit {
 
-  constructor() { }
+  producto:producto[] =[]
+  constructor(private service:BackenApiService) { 
+    this.service.getproductos().subscribe(info=>{ console.log(info)
+    
+       this.producto=info;
+    },error=>{console.log(error)})
+  }
 
   ngOnInit(): void {
   }
