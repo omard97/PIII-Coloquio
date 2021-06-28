@@ -1,7 +1,7 @@
-export class producto {
+export interface producto {
     
-    idProducto:number =0
-    nombre?:string
+    idProducto?:number
+    nombre?:string 
     precio?:string
 
 }

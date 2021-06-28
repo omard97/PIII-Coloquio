@@ -11,6 +11,8 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
 import { RegistrarseComponent } from './registrarse/registrarse.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EditarCatalogoComponent } from './editar-catalogo/editar-catalogo.component';
 
 
 @NgModule({
@@ -22,12 +24,14 @@ import { RegistrarseComponent } from './registrarse/registrarse.component';
     NosotrosComponent,
     CrearClienteComponent,
     RegistrarseComponent,
+    EditarCatalogoComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule /* importacion del modulo */
+    HttpClientModule, /* importacion del modulo */
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

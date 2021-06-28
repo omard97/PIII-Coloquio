@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
+import { EditarCatalogoComponent } from './editar-catalogo/editar-catalogo.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 
@@ -15,6 +16,7 @@ const routes: Routes = [
    { path: 'inicio', component: InicioComponent}, 
    { path: 'catalogo', component: CatalogoComponent}, 
    { path: 'nosotros', component: NosotrosComponent},
+   { path: 'editar', component: EditarCatalogoComponent},
    { path: '**', component: InicioComponent} /* por defecto */
 ];
 

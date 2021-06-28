@@ -1,23 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-
 import { producto } from '../model/producto';
 import { BackenApiService } from '../services/backen-api.service';
 
 @Component({
-  selector: 'app-catalogo',
-  templateUrl: './catalogo.component.html',
-  styleUrls: ['./catalogo.component.css'],
+  selector: 'app-editar-catalogo',
+  templateUrl: './editar-catalogo.component.html',
+  styleUrls: ['./editar-catalogo.component.css'],
 })
-export class CatalogoComponent implements OnInit {
+export class EditarCatalogoComponent implements OnInit {
   public formGroup: FormGroup = new FormGroup({
+    Numero: new FormControl(''),
     nombreP: new FormControl(''),
     precio: new FormControl(''),
   });
   producto: any;
 
   proA: producto[] = [];
-
   constructor(public service: BackenApiService) {
     this.service.getproductos().subscribe(
       (info) => {
@@ -33,23 +32,7 @@ export class CatalogoComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  guardarP() {
-    //debugger;
-    var prod = {
-      Nombre: this.formGroup.value.nombreP,
-      Precio: this.formGroup.value.precio+"",
-    };
-    this.service.crearProd(prod).subscribe(
-      (data) => {
-        console.log(data);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
-
-  /* ModificarP() {
+  ModificarP() {
     console.log('modificando');
     debugger;
     var modP: producto = {
@@ -65,22 +48,5 @@ export class CatalogoComponent implements OnInit {
         console.error(error);
       }
     );
-  } */
+  }
 }
-
-// guardarProducto(){
-//   console.log("hola hoa hoasflaksfkaf");
-//   var prod:producto={
-//     nombre:this.formGroup.value.nombreP,
-//     precio:this.formGroup.value.precio
-
-//   }
-//   debugger
-
-// this.service.Postproducto(prod).subscribe(data=>{
-//   console.log(data)
-//   },error=>{console.error(error)}
-
-// );
-//}
-//}

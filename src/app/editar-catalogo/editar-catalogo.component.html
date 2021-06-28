@@ -1,3 +1,4 @@
+
 <body>
     <header>
         <h1> C a t á l o g o </h1>
@@ -16,7 +17,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
-                    <li class="nav-item">
+                    <li class="nav-item" >
                         <a class="nav-link active" aria-current="page" routerLink="/inicio"> <img class="icono"
                                 src="../../assets/img/Icons/ico-home.png" alt=""> Principal</a>
                     </li>
@@ -24,12 +25,12 @@
                         <a class="nav-link  " routerLink="/clientes"> <img class="icono"
                                 src="../../assets/img/Icons/ico-grupo.png" alt="">Clientes</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled"> <img class="icono" src="../../assets/img/Icons/ico-catalogo.png"
-                                alt="" aria-disabled="true"> Catálogo</a>
+                    <li class="nav-item" routerLink="/catalogo">
+                        <a class="nav-link"> <img class="icono" src="../../assets/img/Icons/ico-catalogo.png"
+                                alt="" > Catálogo</a>
 
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" >
                         <a class="nav-link " tabindex="-1" routerLink="/nosotros"><img class="icono"
                                 src="../../assets/img/Icons/ico-manual.png" alt=""> Nosotros</a>
                     </li>
@@ -46,7 +47,7 @@
 
 
     <div id="divisor" class="container">
-        <h1 id="titulo"> Consolas</h1>
+        <h1 id="titulo"> Lista de Consolas</h1>
         <div class="container" id="contenedorTabla">
             <table class="table table-dark table-striped table-hover" style="color: white;">
                 <thead>
@@ -73,52 +74,22 @@
             </table>
 
         </div>
-        <div class="container" style="padding: 10px; background-color: rgb(141, 141, 141);
+        <!-- <div class="container" style="padding: 10px; background-color: rgb(141, 141, 141);
         border-radius: 10px; box-shadow: 5px 5px 15px rgb(54, 54, 54);">
         <h3 style="text-align: center; color: white;"> Opciones</h3>
             <button routerLink="/editar" style="width: 20%; font-size: 15px; margin-right: 6%;" class="btn btn-warning" > Modificar Producto
             </button>
-        </div>
-
+        </div> -->
 
 
         <div  class="container" style="padding-bottom: 15px; background-color: rgb(141, 141, 141);
-        border-radius: 10px; box-shadow: 5px 5px 15px rgb(54, 54, 54); margin-top: 30px;">
-            <h1 id="titulo"> Nuevo Producto </h1>
-
-            <form [formGroup]="formGroup">
-                <div class="row">
-                    <div class="col">
-                        <input id="nombreProd" type="text" class="form-control" placeholder="Nombre Producto" aria-label="Nombre Producto" 
-                        formControlName="nombreP">
-                    </div>
-                    <div class="col">
-                        <input id="precio" type="number" class="form-control" placeholder="Precio" aria-label="precio"
-                        formControlName="precio">
-                    </div>
-                </div>
-                <br>
-
-
-                <button type="submit" style="width: 20%; text-align: left; font-size: 20px;" class="btn btn-success" (click)="guardarP()">
-                    <img style="margin-right: 20% ;" src="../../assets/img/Icons/ico_nuevoUsuario.png" alt="" >
-                    Crear producto
-                </button>
-                <button id="btn2" type="submit" style="width: 20%; text-align: left; font-size: 20px; margin-left: 3%;" class="btn btn-danger " onclick="limpiar()" >
-                    <img style="margin-right: 20% ;" src="../../assets/img/Icons/ico_nuevoUsuario.png" alt="">
-                    cancelar
-                </button>
-            </form>
-        </div>
-
-        <!-- <div  class="container" style="padding-bottom: 15px; background-color: rgb(141, 141, 141);
         border-radius: 10px; box-shadow: 5px 5px 15px rgb(54, 54, 54); margin-top: 50px;">
-            <h1 id="titulo"> Actualizar </h1>
+            <h1 id="titulo"> Actualizar Producto </h1>
 
             <form [formGroup]="formGroup">
                 <div class="row">
                     <div class="col">
-                        <input id="Numero" type="number" class="form-control" placeholder="Precio" aria-label="Numero"
+                        <input id="Numero" type="number" class="form-control" placeholder="Numero Producto" aria-label="Numero"
                         formControlName="Numero">
                     </div>
                     <div class="col">
@@ -133,7 +104,7 @@
                 <br>
 
 
-                <button type="submit" style="width: 20%; text-align: left; font-size: 20px;" class="btn btn-success" (click)="ModificarP()">
+                <button type="submit" style=" text-align: left; font-size: 20px;" class="btn btn-success" (click)="ModificarP()">
                     <img src="" alt="" >
                     Modificar producto
                 </button>
@@ -142,7 +113,7 @@
                     cancelar
                 </button>
             </form>
-        </div> -->
+        </div>
     </div>
 
 
